@@ -1,0 +1,105 @@
+/* Color Variables */
+:root {
+  --bg-color: #1C1C1C;
+  --card-bg: #262626;
+  --accent-color: #E67E22; /* Carrot Orange */
+  --text-primary: #F5F5F5;
+  --text-secondary: #BDC3C7; /* Silver */
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header & Nav (Consistent with Home/Profile) */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #111;
+}
+
+header h1 {
+  color: var(--accent-color);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  padding: 15px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Main Content Area */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Course Card Styling */
+/* We style the <h2> and its following content as a 'card' */
+h2 {
+  background-color: var(--card-bg);
+  color: var(--accent-color);
+  padding: 20px 20px 5px 20px; /* Padding for the top of the card */
+  margin: 30px 0 0 0;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  border-left: 5px solid var(--accent-color);
+  font-size: 1.5rem;
+}
+
+p {
+  background-color: var(--card-bg);
+  margin: 0;
+  padding: 10px 20px;
+  color: var(--text-secondary);
+}
+
+ul {
+  background-color: var(--card-bg);
+  margin: 0 0 30px 0;
+  padding: 10px 20px 25px 45px; /* Extra padding at bottom to close the card */
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+  list-style-type: square;
+}
+
+li {
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+/* Custom bullet color */
+li::marker {
+  color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul li {
+    margin: 5px 0;
+  }
+}

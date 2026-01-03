@@ -1,0 +1,123 @@
+/* Color Variables */
+:root {
+  --bg-dark: #1C1C1C;
+  --form-bg: #262626;
+  --accent: #E67E22; /* Carrot Orange */
+  --text-main: #F5F5F5;
+  --text-dim: #BDC3C7;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+/* Header & Nav */
+header {
+  text-align: center;
+  padding: 30px;
+  background-color: #111;
+}
+
+header h1 { color: var(--accent); }
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #222;
+  padding: 15px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--text-dim);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+/* Form Container */
+main {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: var(--form-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border-top: 5px solid var(--accent);
+}
+
+/* Label & Input Styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Focus effect: changes border when clicking into a box */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 5px rgba(230, 126, 34, 0.5);
+}
+
+/* Radio Button Styling */
+input[type="radio"] {
+  margin-right: 5px;
+  accent-color: var(--accent); /* Colors the radio button itself */
+}
+
+textarea {
+  height: 100px;
+  resize: vertical; /* Allows user to resize height but not width */
+}
+
+/* Button Styling */
+button {
+  padding: 12px 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"] {
+  background-color: var(--accent);
+  color: white;
+  margin-right: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #d35400; /* Darker orange on hover */
+}
+
+button[type="reset"] {
+  background-color: #444;
+  color: var(--text-dim);
+}
+
+button[type="reset"]:hover {
+  background-color: #555;
+  color: white;
+}

@@ -1,0 +1,110 @@
+/* Color Variables */
+:root {
+  --bg-dark: #1C1C1C;
+  --card-bg: #262626;
+  --accent: #E67E22; /* Carrot Orange */
+  --text-white: #F5F5F5;
+  --text-silver: #BDC3C7;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+/* Header & Navigation (Consistent with other pages) */
+header {
+  text-align: center;
+  padding: 40px;
+  background-color: #111;
+}
+
+header h1 { color: var(--accent); margin: 0; }
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #222;
+  padding: 15px;
+  margin: 0;
+  border-bottom: 2px solid var(--accent);
+}
+
+nav ul li a {
+  color: var(--text-silver);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* Main Content Area */
+main {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Contact Section Styling */
+h2 {
+  color: var(--accent);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adding a small line next to headings for style */
+h2::before, h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #444;
+  margin: 0 15px;
+}
+
+p {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0 30px 0;
+  border: 1px solid #333;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on contact cards */
+p:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+/* Link Styling within contact details */
+main a {
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+main a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Address Styling */
+address-style {
+  line-height: 1.6;
+  color: var(--text-silver);
+}
